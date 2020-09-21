@@ -17,12 +17,13 @@ class Ball():
         self.canvas.move(self.id, 245, 100)
     
     def draw(self):
-        pass
+        self.canvas.move(self.id, 0, -1)
 
 ball = Ball(canvas, "blue")
 
 # main program loop
 while True:
+    ball.draw()
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
