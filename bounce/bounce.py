@@ -2,7 +2,7 @@ from tkinter import *
 import time, random
 
 # ball class
-class Ball():
+class Ball:
     def __init__(self, canvas, color):
         self.canvas = canvas
         self.id = canvas.create_oval(10,10,30,30, fill=color)
