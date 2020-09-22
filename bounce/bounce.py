@@ -1,14 +1,6 @@
 from tkinter import *
 import time, random
 
-tk = Tk()
-tk.title("Bounce")
-tk.resizable(0,0)
-tk.wm_attributes("-topmost", 1)
-canvas = Canvas(tk, width=500, height=500, bd=0, highlightthickness=0)
-canvas.pack()
-tk.update()
-
 # ball class
 class Ball():
     def __init__(self, canvas, color):
@@ -26,6 +18,14 @@ class Ball():
             self.y = 1
         if pos[3] >= self.canvas_height:
             self.y = -1
+
+tk = Tk()
+tk.title("Bounce")
+tk.resizable(0,0)
+tk.wm_attributes("-topmost", 1)
+canvas = Canvas(tk, width=500, height=500, bd=0, highlightthickness=0)
+canvas.pack()
+tk.update()
 
 ball = Ball(canvas, "blue")
 
