@@ -5,11 +5,11 @@ import time, random
 class Ball():
     def __init__(self, canvas, color):
         self.canvas = canvas
+        self.id = canvas.create_oval(10,10,30,30, fill=color)
+        self.canvas.move(self.id, 245, 100)
         self.x = 0
         self.y = -1
         self.canvas_height = self.canvas.winfo_height()
-        self.id = canvas.create_oval(10,10,30,30, fill=color)
-        self.canvas.move(self.id, 245, 100)
     
     def draw(self):
         self.canvas.move(self.id, self.x, self.y)
