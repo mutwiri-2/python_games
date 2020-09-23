@@ -8,7 +8,7 @@ class Ball:
         self.paddle = paddle
         self.id = canvas.create_oval(10,10,30,30, fill=color)
         self.canvas.move(self.id, 245, 100)
-        starts = random.randrange(-3,4)
+        starts = random.choice([-3,-2,-2,1,2,3])
         self.x = starts
         self.y = -3
         self.canvas_height = self.canvas.winfo_height()
