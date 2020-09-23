@@ -48,7 +48,6 @@ class Paddle:
     def draw(self):
         self.canvas.move(self.id, self.x, 0)
         pos = self.canvas.coords(self.id)
-        print(self.x)
         if pos[0] <= 0:
             self.x = 0
         elif pos[2] >= self.canvas_width:
