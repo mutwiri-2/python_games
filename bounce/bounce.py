@@ -44,7 +44,7 @@ canvas = Canvas(tk, width=500, height=400, bd=0, highlightthickness=0)
 canvas.pack()
 tk.update()
 
-
+paddle = Paddle(canvas, 'red')
 ball = Ball(canvas, "blue")
 
 # main program loop
