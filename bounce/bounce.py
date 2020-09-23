@@ -50,6 +50,7 @@ ball = Ball(canvas, "blue")
 # main program loop
 while True:
     ball.draw()
+    paddle.draw()
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
