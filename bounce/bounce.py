@@ -3,8 +3,9 @@ import time, random
 
 # ball class
 class Ball:
-    def __init__(self, canvas, color):
+    def __init__(self, canvas, paddle, color):
         self.canvas = canvas
+        self.paddle = paddle
         self.id = canvas.create_oval(10,10,30,30, fill=color)
         self.canvas.move(self.id, 245, 100)
         starts = random.randrange(-3,4)
@@ -62,7 +63,7 @@ canvas.pack()
 tk.update()
 
 paddle = Paddle(canvas, 'red')
-ball = Ball(canvas, "blue")
+ball = Ball(canvas, paddle, "blue")
 
 # main program loop
 while True:
